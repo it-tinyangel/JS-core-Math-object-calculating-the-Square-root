@@ -1,6 +1,6 @@
 // Function to calculate the arithmetic square root of a number.
 function calculateSqrt(number) {
-	const getNumber = parseFloat(number);
+	const getNumber = Number(number);
 
 	if (isNaN(getNumber) || !isFinite(getNumber)) {
 		return 'Error: Please, enter a number.';
@@ -16,19 +16,15 @@ function calculateSqrt(number) {
 	return `The arithmetic square root of ${getNumber} is ${formattedResult}.`;
 }
 
-// Function to get a number from the user and calculate its square root.
+// Function to get a number from the user and calculate it's square root.
 function getSqrt() {
 	const numberInput = prompt('Enter a number:');
 
 	if (numberInput === null || numberInput.trim() === '') {
 		console.log('Error: Please, enter a number!');
 	} else {
-		if (!/^[+-]?\d*\.?\d+$/.test(numberInput)) {
-			console.log('Error: Please, enter a correct positive number.');
-		} else {
-			const result = calculateSqrt(numberInput);
-			console.log(result);
-		}
+		const result = calculateSqrt(numberInput);
+		console.log(result);
 	}
 }
 
