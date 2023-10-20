@@ -20,7 +20,7 @@ function calculateSqrt(number) {
 function getSqrt() {
 	const numberInput = prompt('Enter a number:');
 
-	if (numberInput === null || numberInput.trim() === '') {
+	if (numberInput === null || numberInput.trim() === '' || numberInput.includes(' ')) {
 		console.log('Error: Please, enter a number!');
 	} else {
 		const result = calculateSqrt(numberInput);
