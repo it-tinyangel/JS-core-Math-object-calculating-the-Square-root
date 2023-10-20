@@ -1,6 +1,6 @@
 // Function to calculate the arithmetic square root of a number.
 function calculateSqrt(number) {
-	const getNumber = Number(number);
+	const getNumber = parseFloat(number);
 
 	if (isNaN(getNumber) || !isFinite(getNumber)) {
 		return 'Error: Please, enter a number.';
